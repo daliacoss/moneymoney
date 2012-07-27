@@ -1,0 +1,1 @@
+{"encounters":[{"name":"mark","npcName":"mark","sections":[{"id":0,"dialog":[{"char":"npc","rlink":false,"lps":20,"delay":2,"text":"Hey Bobby"},{"char":"player","rlink":false,"text":"How's it going?"},{"char":"npc","rlink":false,"text":"Oh man, it's okay."}]}]}]}

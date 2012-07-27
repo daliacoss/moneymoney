@@ -1,0 +1,28 @@
+<encounter name="gasStation">
+
+	<dialog name="mistake">
+		<player>I'm sorry, I made a mistake</player>
+		<npc thought="gastStationThought1">asdfa</npc>
+		<npc>
+		<!-- movement? -->
+		<player></player>
+	</dialog>
+
+	<thought name="gasStationThought1" fadein=5000>
+		<clause color="#aaa" speed=100>
+			Where have i seen this person before?
+		</clause>
+		<clause color="aaa" speed=1000>
+			...
+		</clause>
+		<clause color="#aaa" speed=3>
+			Oh that's where!
+		</clause>
+		<!-- clause for both interactive and noninter - eventLink makes it interactive -->
+		<clause speed=100 eventLink="mistake">
+			I should tell her it was a mistake . . .
+		</clause>
+	</thought>
+
+</encounter>
+

@@ -1,0 +1,72 @@
+-------------------------------
+Fabric v1.22f
+
+Copyright (c) Tazman-Audio 2011
+http://www.Tazman-Audio.co.uk
+-------------------------------
+
+2011-11-29
+----------
+
+- Added undo support to all editor windows and inspector GUI.
+
+2011-11-21
+----------
+
+- Added component settings to GroupComponent.
+- Implemented custom timer interface (game can provide their own timer).
+- GraphViewer displays the correct volume and pitch values.
+
+
+2011-11-17
+----------
+
+- Implemented ability to change max instance parameter at runtime.
+
+
+2011-11-16
+----------
+
+- Fixed EventLog only logging the first entries according to the log history size.
+- Refactored EventViewer layout.
+- Added Filter and Current options to EventViewer.
+- Made the GraphViewer display a selected component.
+
+
+2011-11-04
+----------
+
+- Added override 2D Properties support.
+- Changed the Mixer slot view to use the area window instead of a Box.
+
+
+2011-10-29
+----------
+
+- Enable fade in/out properties only on components that have event listeners.
+- Fix stop to stop all instances.
+- Fixed trigger time to use component instance.
+- Fixed loosing sounds when going out of focus.
+
+
+2011-10-21
+----------
+
+- Fix for when stop/start events called in the same frame.
+- Refactored Load/Unload Asset functions.
+
+
+2011-10-20
+----------
+
+- Added GetComponentByName function in FabricManager.
+- Fixed RandomComponent not initialising its base component properties.
+- Fix for missing audio, initialise fade parameter on all instances.
+
+
+2011-10-18
+----------
+
+- Implemented fade in/out support.
+- Implemented support to set the audio component clip.
+- Fixed bugs failing to stop and set parameters to the correct instances.

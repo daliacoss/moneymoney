@@ -1,0 +1,258 @@
+{
+	"encounters":[
+	
+		{
+			"name": "donaldEncounter",
+			"npcName": "donald",
+			"sections": [
+				
+				{
+					"id": 1,
+					
+					"dialog": [
+						{ 
+							"char": "npc",
+							"rlink": true,
+							"text":	"Hey Bobby, what the fuck are you doing walking around like a sketchy son of a bitch this time of night without a drink?"
+						}		
+					],
+
+					"reaction": [
+						{"text": "I guess it is dark."},
+						{
+							"link": 2,
+							"text": "I should say hello."
+
+						},
+						{
+							"text": "Thank god.",
+							"link": 3
+						}
+					]
+
+				},
+
+				{
+					"id": 2,
+
+					"dialog": [
+						{
+							"char": "player",
+							"text": "Hey Bruce. What's up?"
+						},		
+						{
+							"char": "npc",
+							"text": "Hah! You motherfucker, I didn't even know it was you, I was just guessing! Why don't you come over here and have a beer?"
+						}
+					],
+					
+					"reaction": [
+						{
+							"text": "Thank you God.",
+							"link": 4
+
+						}
+					]
+				},
+
+				{	
+					"id": 3,
+
+					"dialog": [
+						{
+							"char": "player",
+							"text": "You son of a bitch. I'm looking for a drink!"
+						},
+
+						{
+							"char": "npc",
+							"rlink": true,
+							"text": "Hah! You motherfucker, I didn't even know it was you, I was just guessing! Then why don't you come over here and have a beer?"
+
+						}
+
+					],
+
+					"reaction": [
+						{
+							"text": "Thank you God",
+							"link": 4
+						}
+					]
+				},
+
+				{
+					"id": 4,
+
+					"dialog": [
+						{
+							"char": "player",
+							"text": "What are you doing?"
+						},
+
+						{
+							"char": "npc",
+							"rlink": true,
+							"text": "I'm looking for my shovel."
+						}
+					],
+					
+					"reaction": [
+						{
+							"text": "He's drunk as a skunk.",
+							"link": 5
+						}
+					]
+				},
+
+				{
+					"id": 5,
+
+					"dialog": [
+						{
+							"char": "player",
+							"text": "Man, you're wasted. What's the shovel for?"
+						},
+					
+						{
+							"char": "npc",
+							"rlink": true,
+							"text": "Digging and dancing. I'm going to make a fire, and then, my lady and I are gonna drink and jump around the flames to the fine sound of some loud music playing. Like crazy ass motherfuckers we will dance. God, Bobby, I love the summer."
+						}
+					],
+
+					"reaction": [
+						{
+							"text": "That sounds nice."
+						},
+
+						{
+							"text": "I wonder if he needs help.",
+							"link": 6
+						}
+					]
+
+				},
+
+				{
+					"id": 6,
+
+					"dialog": [
+						{
+							"char": "npc",
+							"rlink": true,
+							"text": "Nah, I just found it. Anyway, let's drink. You want something?"
+						}
+					],
+
+					"reaction": [
+						{
+							"text": "I would love a drink.",
+							"link": 7
+						}
+					]
+				},
+
+				{
+					"id": 7,
+
+					"dialog": [
+						{
+							"char": "player",
+							"text": "Sure thing."
+
+						}
+					]
+				}
+			]
+		},
+
+		{ 
+			"name": "umbrellaManEncounter",
+			"npcName": "umbrellaMan",
+			"section": 	[
+				
+				{
+					"id": 8,
+
+					"dialog": [
+						{
+							"char": "npc",
+							"rlink": true,
+							"text": "Excuse me, ma'am. What are you doing out in an awful rainstorm like this?"
+
+							}
+					],
+
+					"reaction": [
+						{
+							"text": "My husband and I are going for a stroll.",
+							"link": 9
+						},
+
+						{
+							"text": "What are you doing out in a rainstorm like this?",
+							"link": 10
+						}
+					]
+				},
+
+				{
+					"id": 9,
+
+					"dialog": [
+						{
+							"char": "player",
+							"text": "My husband and I are going for a stroll."
+						},
+
+						{
+							"char": "npc",
+							"rlink": true,
+							"text": "Your husband? Excuse me, ma'am, but you don't seem to have your husband with you."
+						}
+					],
+
+					"reaction":	[
+						{
+							"text": "I'm sure he'll be here any minute.",
+							"link": 11
+
+						},
+
+						{
+							"text": "What are you doing out in a rainstorm like this?",
+							"link": 10
+						}
+					]
+				},	
+
+				{
+					"id": 10,
+
+					"dialog": [
+						{
+							"char": "player",
+							"text": "What are you doing out in a rainstorm like this?"
+
+						},
+
+						{
+							"char": "npc",
+							"rlink": true,
+							"text": "Well, my dear, I'm sure you've heard the news--about the young man recently in from St. Petersburg... "
+						}
+					],
+						
+					"reaction": [
+						{
+							"text": ""
+
+						}
+					]
+				}
+			]
+		}
+
+	]
+}
