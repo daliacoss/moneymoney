@@ -44,10 +44,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Fabric\Tutorials\Scripts\Listener.cs" />
-     <Compile Include="Assets\Fabric\Tutorials\Scripts\LoadAsset.cs" />
-     <Compile Include="Assets\Fabric\Tutorials\Scripts\ObjectLabel.cs" />
-     <Compile Include="Assets\Fabric\Tutorials\Scripts\Test.cs" />
      <Compile Include="Assets\Scripts\Sprite\DrawOrder.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d_demo\tk2dDemoAnimController.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d_demo\tk2dDemoButtonController.cs" />
@@ -59,7 +55,6 @@
      <None Include="Assets\TK2DROOT\tk2d\Shaders\PremulVertexColor.shader" />
      <None Include="Assets\Fabric\Revision.txt" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\Blend2TexVertexColor.shader" />
-     <None Include="Assets\XML\test.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\BlendVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d_demo\multiatlas\source.txt" />
      <None Include="Assets\Fabric\Readme.txt" />

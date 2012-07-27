@@ -63,7 +63,6 @@
      <None Include="Assets\TK2DROOT\tk2d\Shaders\PremulVertexColor.shader" />
      <None Include="Assets\Fabric\Revision.txt" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\Blend2TexVertexColor.shader" />
-     <None Include="Assets\XML\test.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\BlendVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d_demo\multiatlas\source.txt" />
      <None Include="Assets\Fabric\Readme.txt" />
