@@ -1,6 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Events/EncounterManager.js">
+    <Files>
+      <File FileName="Assets/Scripts/Character/Talk.js" Line="22" Column="2" />
+      <File FileName="Assets/Scripts/Character/Thoughts.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Events/EncounterManager.js" Line="42" Column="38" />
+      <File FileName="Assets/Scripts/Sprite/DrawOrder.cs" Line="12" Column="5" />
+      <File FileName="Assets/Scripts/Events/JSONParse.js" Line="31" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

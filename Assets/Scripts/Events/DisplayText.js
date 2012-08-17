@@ -9,6 +9,7 @@ function display (text:String) {
 }
 
 function linebreaks(currentText:String){
+	//why didnt i comment this...
 	
 	var offset = 0;
 	var finalLength = currentText.Length + currentText.Length / lineWidth;

@@ -1,6 +1,6 @@
 var filename = "encounters.json";
 var player:GameObject;
-var streamOfConsciousness:Talk;
+var streamOfConsciousness:Thoughts;
 
 @HideInInspector var node:Boo.Lang.Hash;
 private var playerName = "Player";
@@ -45,17 +45,18 @@ function runEncounter(name:String, npc:GameObject) {
 			var lps:double = (line["lps"] != null) ? line["lps"] : lpsDef; // i should switch to c#..
 			var delay:double = (line["delay"] != null) ? line["delay"] : delayDef;
 			
-			//trigger stream of consciousness
+			//trigger stream of consciousness by sending entire reaction to Thoughts.js
 			if (line["rlink"]){
 				var reaction = section["reaction"];
 				if (reaction == null) Debug.LogError("Reaction not found");
-				else streamOfConsciousness.talk(reaction["text"], reaction["lps"], reaction["delay"]);
+				//else streamOfConsciousness.process(reaction["text"], reaction["lps"], reaction["delay"]);
+				else streamOfConsciousness.process(reaction);
 			}
 			
 			//send line to character
 			if (line["char"] == "npc") character = npc;
 			else if (line["char"] == "player") character = player;
-			yield character.GetComponent(Talk).talk(line["text"], lps, delay);
+			yield character.GetComponent(Talk).talk(line["text"], lps, delay, true);
 		}
 	}
 }

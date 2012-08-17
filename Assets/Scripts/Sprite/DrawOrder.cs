@@ -1,14 +1,21 @@
+//assigns a z-index to all objects with a DrawOrder tag
+
+//NOTE: this will not work with objects created at run-time
+
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 public class DrawOrder : MonoBehaviour {
-	int lowestZ = 1;
+	public int lowestZ = 1;
+	public string tag = "DrawOrder";
 	[HideInInspector] List<Transform> objects = new List<Transform>();
 
 	void Start () {
-		foreach (Transform i in transform) objects.Add(i);
+		foreach (GameObject j in GameObject.FindGameObjectsWithTag(tag)) {
+			objects.Add(j.transform);
+		};
 	}
 	
 	void Update () {

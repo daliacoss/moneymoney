@@ -1,3 +1,5 @@
+//TODO: try using Instantiate() to get a more stable framerate
+
 enum SpeedUnit {SPF, FPS};
 var speedUnit:SpeedUnit = SpeedUnit.SPF;
 var speed = .04;
@@ -5,10 +7,10 @@ var speed = .04;
 private var sprite:tk2dAnimatedSprite;
 
 //get rid of the smurf names
-enum PlayerState {IDLE, WALKING};
+enum State {IDLE, WALKING};
 enum FaceV {FRONT, BACK};
 enum FaceH {LEFT, RIGHT};
-@HideInInspector var state:PlayerState;
+@HideInInspector var state:State;
 var faceV:FaceV;
 var faceH:FaceH;
 private var faceHPrev:FaceH;
@@ -28,7 +30,7 @@ function Start () {
 	sprite = GetComponent(tk2dAnimatedSprite);
 	//sprite.Play("bobbyIdleFront");
 	
-	state = PlayerState.IDLE;
+	state = State.IDLE;
 }
 
 function Update () {
@@ -41,7 +43,7 @@ function Update () {
 	//Time.timeScale = (paused) ? 0 : 1;
 }
 
-function movetest(){
+private function movetest(){
 	//transform.Translate(Vector3.up * 40 * Time.deltaTime);
 	rigidbody.MovePosition(rigidbody.position + moveX*20);
 	Debug.Log((rigidbody.position + Vector3(10.0, 0.0, 0.0)) * Time.deltaTime);
@@ -65,7 +67,7 @@ function move(){
 	
 	//this is a vector2 because the z axis fucks everything up
 	while (Vector2(rigidbody.position.x, rigidbody.position.y) != clickPosition){
-		state = PlayerState.WALKING;
+		state = State.WALKING;
 		var directionX:float = Mathf.Sign(clickPosition.x - rigidbody.position.x);
 		var directionY:float = Mathf.Sign(clickPosition.y - rigidbody.position.y);
 		
@@ -91,7 +93,7 @@ function move(){
 		if (Mathf.Abs(rigidbody.position.x - clickPosition.x) < moveX.x && rigidbody.position.x != clickPosition.x) rigidbody.position.x = clickPosition.x;
 	}
 	
-	state = PlayerState.IDLE;
+	state = State.IDLE;
 }
 
 function getFace(){
@@ -107,11 +109,11 @@ function animate(){
 	
 	if (faceH != faceHPrev) sprite.FlipX();
 	
-	if (state == PlayerState.IDLE){ 
+	if (state == State.IDLE){ 
 		if (faceV == FaceV.FRONT) playOnce("bobbyIdleFront");
 		else playOnce("bobbyIdleBack");
 	}
-	else if (state == PlayerState.WALKING){
+	else if (state == State.WALKING){
 		if (faceV == FaceV.FRONT) playOnce("bobbyWalkFront");
 		else playOnce("bobbyWalkBack");
 	}
